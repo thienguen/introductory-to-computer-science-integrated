@@ -1,0 +1,131 @@
+|---|---|---|---|---|
+|   |   |   |   |   | 0
+|---|---|---|---|---|
+|   |   |   |   |   | 1
+|---|---|---|---|---|
+|   |   |   |   |   | 2
+|---|---|---|---|---|
+|   |   |   |   |   | 3
+|---|---|---|---|---|
+|   |   |   |   |   | 4
+|---|---|---|---|---|
+
+  0   1   2   3   4
+
+const int SIZE = 5;
+const int BOUND = 5;
+
+// this is a 2D array of characters
+char board[5][5];    
+
+string matrix[5];    // is a 1D array of string, BUT, a string is a collection of characters
+			   // so string could also treated as 1D array of characters
+			   // 2D of characters
+
+Violated at (0, 3) and (2, 2)
+
+// input 1
+...K.
+...K.
+K.K..
+.K.K.
+K.K.K
+
+// how to read in input
+for (int i = 0; i < SIZE; i++)
+{
+	std::cin >> matrix[i];
+}
+
+// check if your input is correct
+for (int i = 0; i < SIZE; i++)
+{
+	std::cout << matrix[i];
+}
+
+// first function or first half of the solution
+// we count the knight see if it is 9 or not
+// if not 9 then false
+// if 9 then Yes / True.
+
+bool kCount(std::string matrix[5])
+{
+	int knights = 0;
+		
+	// i and j 
+	// x and y
+	// r and c
+
+	for (int r = 0; r < 5; r++)
+	{
+		for (int c = 0; c < 5; c++)
+		{
+			if (matrix[r][c] == 'K')
+			{
+				kCount++;
+			}
+		}
+	}
+	
+	// if the knights count is 9, return true
+	// if not return false.
+}
+
+// checking if we have a knight have possible moves that attack a different knight
+bool attackCheck(std::string matrix[5])
+{
+	...
+	...
+}
+
+// second function or second half of the solution
+// we check if one knight can attack a different knight from their position
+
+
+// 1. we write out the possible move for a knight
+	From there to there, what is the differences in x and y coordinates or r and c
+	board[x][y]
+	where x is row, y is column
+	where x is r  , y is c
+
+// possible moves, store them in an array
+// for both row and column
+
+	rMoves[] = { -1, ?, ?, ? ... ? };  <-- 8 in totals
+	cMoves[] = { -2, ?, ?, ? ... ? };  <-- 8 in totals
+ 
+	// you will use continue later on in the loop, or set up a bool control to
+	// indexing the array
+
+(2, 2) add in with (-1, -2)  --> (1, 0)
+
+// indexing in the array, 
+// looping the matrix array again, or the board array
+// to find the K, if it is the knight --> you have x and y 
+
+// start checking 1. loop 8 time and add the coor x and y
+// with rMoves and cMoves to have new coordinates
+
+2. we check that move is within bound or not
+3. if it is within bound
+4. then we proceed to check at that position,. IS THERE A letter 'K' or not
+
+// IF THAT COOR is within bound AND at the new coor is a 'K'
+// then we know that a knight has a possible move to attack a diff knight?
+
+you call it a day, bool = true;
+
+// if the above happen, you set that var to false;
+
+return flag;
+
+// within bound mean that it is not negative (>=0) and < 5
+
+// if there is a letter K at that pos, then it is a invalid board / matrix
+
+
+
+
+
+
+
